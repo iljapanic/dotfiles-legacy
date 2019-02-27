@@ -5,9 +5,9 @@ DEST_DIR="$HOME/dev/dotfiles"
 
 # zsh
 rm -rf "$DEST_DIR/.zshrc"
-yes | \cp -rf "$HOME/.zshrc" "$DEST_DIR"
+yes | \cp -rf "$HOME/.zprezto/runcoms/zshrc" "$DEST_DIR/.zshrc"
 rm -rf "$DEST_DIR/.zpreztorc"
-yes | \cp -rf "$HOME/.zpreztorc" "$DEST_DIR"
+yes | \cp -rf "$HOME/.zprezto/runcoms/zpreztorc" "$DEST_DIR/.zpreztorc"
 
 # scripts
 rm -rf "$DEST_DIR/scripts"

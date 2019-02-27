@@ -1,0 +1,32 @@
+#!/bin/bash
+# Creates a menu of special characters via rofi. Once a character is
+# selected, it is pasted to the cursor via xdotool. Symbols can be added to the
+# menu on the character_list with any keyword, but make sure to keep the syntax
+#
+# borrowed extensively from https://github.com/mbfraga
+
+launcher="rofi"
+character_list="$HOME/utils/special_character_list_reduced"
+sep=":"
+
+cd "$(dirname "$0")" || exit
+
+
+if ! (command -v rofi 2>/dev/null); then
+  echo "rofi not installed..."
+  exit 1
+fi
+
+_rofi () {
+  rofi -dmenu -sync -p "symbols"
+}
+
+selected_string=$(_rofi < "$character_list")
+
+
+selected_symbol=$(cut -d "$sep" -f 2 <<< "$selected_string")
+#trim whitespace
+selected_symbol=${selected_symbol// }
+
+echo "$selected_symbol"
+xdotool type --delay 100 "$selected_symbol"

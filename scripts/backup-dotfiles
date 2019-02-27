@@ -1,0 +1,18 @@
+#!/bin/bash
+
+DEST_DIR="$HOME/dev/dotfiles"
+
+
+# zsh
+rm -rf "$DEST_DIR/.zshrc"
+yes | \cp -rf "$HOME/.zshrc" "$DEST_DIR"
+rm -rf "$DEST_DIR/.zpreztorc"
+yes | \cp -rf "$HOME/.zpreztorc" "$DEST_DIR"
+
+# scripts
+rm -rf "$DEST_DIR/scripts"
+yes | \cp -rf "$HOME/scripts/" "$DEST_DIR"
+
+# fonts
+rm -rf "$DEST_DIR/.fonts"
+yes | \cp -rf "$HOME/.fonts/" "$DEST_DIR"

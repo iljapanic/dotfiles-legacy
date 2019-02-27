@@ -1,0 +1,1 @@
+/home/yubot/.zprezto/runcoms/zshrc

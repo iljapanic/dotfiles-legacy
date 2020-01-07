@@ -1,0 +1,18 @@
+A File Icon
+AdvancedNewFile
+ApacheConf
+AutoFileName
+Babel
+Babel Snippets
+BracketHighlighter
+Color Higlight
+Emmet
+GitGutter
+Import Cost
+JsPrettier
+Nord
+Package Control
+SideBarEnhancements
+SublimeCodeIntel
+TailwindCSSAutocomplete
+Theme - Spacegray
